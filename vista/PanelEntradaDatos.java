@@ -1,5 +1,7 @@
 package vista;
 
-public class PanelEntradaDatos {
-    
+public class PanelEntradaDatos 
+{
+
+
 }

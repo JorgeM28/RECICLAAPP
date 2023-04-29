@@ -1,5 +1,6 @@
 package vista;
 
-public class PanelOperaciones {
+public class PanelOperaciones 
+{
     
 }
