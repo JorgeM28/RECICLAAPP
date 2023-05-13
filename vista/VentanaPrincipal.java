@@ -1,81 +1,59 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-
 
 public class VentanaPrincipal extends JFrame
 {
-    //----------------------
-    //Atributos
-    //----------------------
-public PanelUsuario miUsuario;
-private JLabel lbImagen;
-private ImageIcon iImagen;
-
-//Constructor
-public VentanaPrincipal()
-{
-//Definición del layout de la ventana
-this.setLayout(null);
-
-//crear el panel del usuario
-miUsuario = new PanelUsuario();
-miUsuario.setBounds(0, 0, 850, 550);
-add(miUsuario);
+    //atributos
+    public PanelUsuario miPanelUsuario;
+    public VentanaInteracion miVentanaInteracion;
 
 
 
 
+    //constructor
+    public VentanaPrincipal ()
+    {
+        //definicion del layout de la ventana 
+        this.setLayout(null);
+        
+
+        //agregar el panel usuario
+        miPanelUsuario = new PanelUsuario();
+        miPanelUsuario.setBounds(0, 0, 400, 400);
+        this.add(miPanelUsuario);
+
+        
 
 
 
+        //caracteristicas de la ventana
+        this.setTitle("RECICLAAPP");
+        this.setSize(400, 400);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setResizable(false);
+        this.setVisible(true);
 
-//Caracteristicas de la ventana
+         //icono de la ventana
+        Image icon = new ImageIcon(getClass().getResource("imagenes/icono.png")).getImage();
+            setIconImage(icon);
 
+    }
 
-this.setTitle(" RECICLAAPP");
-this.setSize(850,550);
-this.setLocationRelativeTo(null);
-this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-this.setResizable(false);
-this.setVisible(true);
+    public void CrearVentanaInteracion()
+    {
+         miVentanaInteracion = new VentanaInteracion();
 
- //icono de la ventana
- Image icon = new ImageIcon(getClass().getResource("imagenes/icono.png")).getImage();
- setIconImage(icon);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 
 
 }
-   
-    
 
 
-
-}
